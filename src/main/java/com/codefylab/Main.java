@@ -37,16 +37,16 @@ public class Main {
         Aluno user4 = new Aluno(4, "Guilherme", 0);
 
         //Adicionando os livros ao repositório
-        bibliotecaRepository.addLivro(livro1);
-        bibliotecaRepository.addLivro(livro2);
-        bibliotecaRepository.addLivro(livro3);
-        bibliotecaRepository.addLivro(livro4);
+        bibliotecaRepository.save(livro1);
+        bibliotecaRepository.save(livro2);
+        bibliotecaRepository.save(livro3);
+        bibliotecaRepository.save(livro4);
 
         //adicionando os usuários ao repositório
-        usuarioRepository.addUser(user1);
-        usuarioRepository.addUser(user2);
-        usuarioRepository.addUser(user3);
-        usuarioRepository.addUser(user4);
+        usuarioRepository.save(user1);
+        usuarioRepository.save(user2);
+        usuarioRepository.save(user3);
+        usuarioRepository.save(user4);
 
         System.out.println("\n==== Estado Inicial ====");
 

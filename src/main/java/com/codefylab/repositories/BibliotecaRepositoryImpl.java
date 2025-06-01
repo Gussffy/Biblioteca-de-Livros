@@ -27,9 +27,4 @@ public class BibliotecaRepositoryImpl implements BibliotecaRepository {
         return new ArrayList<>(livros);
     }
 
-    @Override
-    public void addLivro(Livro livro) {
-        livros.add(livro);
-    }
-
 }

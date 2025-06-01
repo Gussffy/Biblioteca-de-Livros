@@ -28,9 +28,4 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
         return new ArrayList<>(usuarios);
     }
 
-    @Override
-    public void addUser(Usuario usuario) {
-        usuarios.add(usuario);
-    }
-
 }

@@ -8,6 +8,4 @@ public interface BibliotecaRepository {
     Livro findById(int id);
     void save(Livro livro);
     List<Livro> findAllLivros();
-    void addLivro(Livro livro);
-
 }

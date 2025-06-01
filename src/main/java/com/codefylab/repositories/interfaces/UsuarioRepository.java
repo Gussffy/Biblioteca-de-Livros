@@ -10,6 +10,4 @@ public interface UsuarioRepository {
 
     List<Usuario> findAllUsers();
 
-    void addUser(Usuario usuario);
-
 }
