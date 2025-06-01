@@ -19,9 +19,11 @@ Ao executar os testes e resultados irão aparecer no console, seram exibidos:
 ==== Estado Inicial ====
 
 ==== Operações de empréstimos de livros ====
+
 ==== Estado Após Emprestimos ====
 
 ==== Operações de devoluções de livros ====
+
 ==== Estado Após Devoluções ====
 
 Para o teste criei 4 livros e 4 Usuários que foram usados para fazer as operações de emprestar e devolver livros.
