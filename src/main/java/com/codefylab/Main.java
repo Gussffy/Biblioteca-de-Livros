@@ -26,9 +26,7 @@ public class Main {
         Livro livro1 = new Livro(1, "Java Completo", 1);
         Livro livro2 = new Livro(2, "Estrutura de Dados", 1);
         Livro livro3 = new Livro(3, "Programação Orientada a Objetos", 1);
-        Livro livro4 = new Livro(4,"Princípios SOLID",1);
-
-
+        Livro livro4 = new Livro(4, "Princípios SOLID", 1);
 
         //Criação de Usuários
         Aluno user1 = new Aluno(1, "Gustavo", 1);
@@ -57,6 +55,8 @@ public class Main {
         listarTodosUsuarios(usuarioRepository);
 
         System.out.println("\n==== Operações de empréstimos de livros ====\n");
+
+        emprestarLivro(emprestarService, livro1, user1); //Erro: Livro não está disponível.
         emprestarLivro(emprestarService, livro1, user1); //Emprestado para Gustavo
         emprestarLivro(emprestarService, livro2, user2); //Professor
         emprestarLivro(emprestarService, livro3, user3); //Emprestado para Láiza
@@ -72,11 +72,11 @@ public class Main {
 
         System.out.println("\n==== Operações de devoluções de livros ====\n");
 
-        devolverLivro(devolverService, livro3, user2); //Erro: Este livro não foi emprestado para este usuário.
-        devolverLivro(devolverService, livro2, user4); //Erro: Este livro não foi emprestado para este usuário.
         devolverLivro(devolverService, livro1, user1); //Java Completo Devolvido
         devolverLivro(devolverService, livro3, user3); //Programação Orientada a Objetos Devolvido
-        devolverLivro(devolverService, livro1, user1); //Erro: Livro já foi devolvido.
+        devolverLivro(devolverService, livro3, user2); //Erro: Livro já foi devolvido.
+        devolverLivro(devolverService, livro2, user4); //Erro: Este livro não foi emprestado para este usuário.
+        devolverLivro(devolverService, new Livro(), new Aluno()); //Erro: Livro ou usuário não encontrado.
 
         System.out.println("\n==== Estado Após Devoluções ====");
 
@@ -98,7 +98,7 @@ public class Main {
             System.out.println(" Id: " + livro.getId() +
                     " Título: " + livro.getTitulo() +
                     " Valor: " + livro.getValorCredito() +
-                    " Disponível: " + ((livro.isDisponivel())? "SIM" : "NÃO"));
+                    " Disponível: " + ((livro.isDisponivel()) ? "SIM" : "NÃO"));
         }
     }
 
